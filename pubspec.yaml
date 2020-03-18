@@ -1,0 +1,37 @@
+name: flutter_app_demo
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  provider: ^3.1.0
+  connectivity: ^0.4.8+1
+  hex: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - language/
+    - images/
+  fonts:
+    - family: Sarabun
+      fonts:
+        - asset: fonts/Sarabun-Regular.ttf
+    - family: Sarabun-SemiBold
+      fonts:
+        - asset: fonts/Sarabun-SemiBold.ttf
+    - family: Sarabun-Medium
+      fonts:
+        - asset: fonts/Sarabun-Medium.ttf

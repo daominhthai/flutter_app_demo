@@ -1,0 +1,1 @@
+const String ic_splash = 'images/ic_splash.jpg';
