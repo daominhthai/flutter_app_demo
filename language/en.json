@@ -2,6 +2,14 @@
   "txt_email": "Email",
   "txt_password": "Password",
   "txt_login_button": "Login",
+  "txt_register_button": "Register",
   "txt_empty_text_field": "Don't blank !",
-  "txt_request_type_info": "Please enter full information !"
+  "txt_request_type_info": "Please enter full information !",
+  "txt_ok": "OK",
+  "txt_login_fail": "Login failed",
+  "txt_login_success": "Login success",
+  "txt_register_fail": "Register fail",
+  "txt_register_success": "Register success",
+  "txt_title_register": "Register account",
+  "txt_request_logout": "Do you really want to logout ?"
 }

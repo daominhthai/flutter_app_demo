@@ -9,7 +9,7 @@ Future main() async {
   Provider.debugCheckInvalidValueType = null;
   var configuredApp = AppConfig(
     flavor: Flavor.RELEASE,
-    apiBaseUrl: 'https://apihrms.gsotgroup.vn',
+    apiBaseUrl: '',
     child: MyApp(),
   );
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);

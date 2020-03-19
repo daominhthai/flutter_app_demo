@@ -1,5 +1,13 @@
 const String txt_email = 'txt_email';
 const String txt_password = 'txt_password';
 const String txt_login_button = 'txt_login_button';
+const String txt_register_button = 'txt_register_button';
 const String txt_empty_text_field = 'txt_empty_text_field';
 const String txt_request_type_info = 'txt_request_type_info';
+const String txt_ok = 'txt_ok';
+const String txt_login_fail = 'txt_login_fail';
+const String txt_register_fail = 'txt_register_fail';
+const String txt_login_success = 'txt_login_success';
+const String txt_register_success = 'txt_register_success';
+const String txt_title_register = 'txt_title_register';
+const String txt_request_logout = 'txt_request_logout';

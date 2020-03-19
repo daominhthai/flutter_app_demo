@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demo/core/base/base_view.dart';
+import 'package:flutter_app_demo/core/router/router.dart';
 import 'package:flutter_app_demo/core/util/utils.dart';
+import 'package:flutter_app_demo/core/viewmodels/views/login_view_model.dart';
 import 'package:flutter_app_demo/ui/constrants/app_images.dart';
 import 'package:flutter_app_demo/ui/constrants/app_strings.dart';
 import 'package:flutter_app_demo/ui/widgets/dm_button.dart';
@@ -57,25 +60,41 @@ class _LoginViewState extends State<LoginView> {
                         key: passKey)),
                 Builder(
                   builder: (context) => Container(
-                    padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                    child: DMButton(
-                      Utils.getString(context, txt_login_button),
-                      width: MediaQuery.of(context).size.height,
-                      onPress: () {
-                        if(emailController.text.isEmpty || passwordController.text.isEmpty){
-                          final snackBar = SnackBar(
-                            content: DMText(
-                              Utils.getString(context, txt_request_type_info),
-                              style: TextStyle(color: Colors.white),
-                              textAlign: TextAlign.center,
-                            ),
-                          );
-                          Scaffold.of(context).showSnackBar(snackBar);
-                        }
-                      },
-                    ),
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                      child: BaseView<LoginViewModel>(
+                        model: LoginViewModel(context),
+                        onModelReady: (model) => {},
+                        builder: (context, model, child) => DMButton(
+                          Utils.getString(context, txt_login_button),
+                          width: MediaQuery.of(context).size.width,
+                          onPress: () {
+                            if(emailController.text.isEmpty || passwordController.text.isEmpty){
+                              final snackBar = SnackBar(
+                                content: DMText(
+                                  Utils.getString(context, txt_request_type_info),
+                                  style: TextStyle(color: Colors.white),
+                                  textAlign: TextAlign.center,
+                                ),
+                              );
+                              Scaffold.of(context).showSnackBar(snackBar);
+                            }else{
+                              LoginViewModel(context).login(emailController.text, passwordController.text);
+                            }
+                          },
+                        ),
+                      )
                   ),
-                )
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                  child: DMButton(
+                    Utils.getString(context, txt_register_button),
+                    width: MediaQuery.of(context).size.height,
+                    onPress: () {
+                      Navigator.pushNamed(context, Router.register);
+                    },
+                  ),
+                ),
               ],
             ),
           ),
@@ -87,8 +106,6 @@ class _LoginViewState extends State<LoginView> {
   @override
   void dispose() {
     super.dispose();
-    emailController.text = '';
-    passwordController.text = '';
     emailController.dispose();
     passwordController.dispose();
   }
