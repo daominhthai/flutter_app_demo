@@ -11,5 +11,6 @@
   "txt_register_fail": "Register fail",
   "txt_register_success": "Register success",
   "txt_title_register": "Register account",
-  "txt_request_logout": "Do you really want to logout ?"
+  "txt_request_logout": "Do you really want to logout ?",
+  "txt_update_profile_fail": "Update failed"
 }

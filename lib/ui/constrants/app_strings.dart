@@ -11,3 +11,5 @@ const String txt_login_success = 'txt_login_success';
 const String txt_register_success = 'txt_register_success';
 const String txt_title_register = 'txt_title_register';
 const String txt_request_logout = 'txt_request_logout';
+const String txt_update_profile = 'txt_update_profile';
+const String txt_update_profile_fail = 'txt_update_profile_fail';

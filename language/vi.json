@@ -11,5 +11,6 @@
   "txt_register_fail": "Đăng ký thất bại",
   "txt_register_success": "Đăng ký thành công",
   "txt_title_register": "Đăng ký tài khoản",
-  "txt_request_logout": "Bạn thực sự muốn đăng xuất"
+  "txt_request_logout": "Bạn thực sự muốn đăng xuất",
+  "txt_update_profile_fail": "Cập nhật thất bại"
 }

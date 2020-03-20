@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_app_demo/core/router/router.dart';
-import 'package:flutter_app_demo/core/services/authentication.dart';
+import 'package:flutter_app_demo/core/services/authentication_services.dart';
 import 'package:flutter_app_demo/core/util/utils.dart';
 import 'package:flutter_app_demo/ui/constrants/app_strings.dart';
 import 'package:flutter_app_demo/ui/widgets/dialog_custom.dart';
@@ -18,7 +18,6 @@ class LoginViewModel extends ChangeNotifier{
     dynamic result = await _authServices.signInWithEmail(email, password);
     if(result == null){
       Navigator.pop(_context);
-      print("Login fail");
       showMessageDialog(_context, description: Utils.getString(_context, txt_login_fail), onPress: () => Navigator.pop(_context));
     }
     else{

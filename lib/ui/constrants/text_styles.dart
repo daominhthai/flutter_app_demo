@@ -7,7 +7,3 @@ TextStyle normalTextStyle(num size) {
 TextStyle appBarTextStyle(num size) {
   return TextStyle(fontSize: size, color: Colors.white);
 }
-
-TextStyle loginInputHintTextStyle(num size) {
-  return TextStyle(fontSize: size, color: Colors.black);
-}

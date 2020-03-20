@@ -26,7 +26,7 @@ class _LoginViewState extends State<LoginView> {
     // TODO: implement build
     return GestureDetector(
       onTap: () {
-        FocusScope.of(context).requestFocus(new FocusNode());
+        Utils.closeKeyboard(context);
       },
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -36,8 +36,8 @@ class _LoginViewState extends State<LoginView> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.2,
-                  width: MediaQuery.of(context).size.height * 0.3,
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  width: MediaQuery.of(context).size.height * 0.35,
                   child: Image.asset(
                     ic_splash,
                     fit: BoxFit.fitWidth,
